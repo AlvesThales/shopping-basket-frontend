@@ -23,7 +23,7 @@ export class RegisterComponent {
           this.registrationSuccess = true;
           setTimeout(() => {
             this.router.navigate(['/login']);
-          }, 5000);
+          }, 3000);
         } else {
           alert('Registration failed');
         }
