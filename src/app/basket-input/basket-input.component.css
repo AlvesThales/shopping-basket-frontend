@@ -1,22 +1,21 @@
-/* src/app/basket-input/basket-input.component.css */
 .container {
   max-width: 600px;
-  margin: 0 auto;
+  margin: 20px auto;
   padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background-color: #86ade9; 
-  color: #fff; 
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
   text-align: center;
   margin-bottom: 20px;
-  color: #fff; 
+  color: #333;
+  font-family: 'Roboto', sans-serif;
 }
 
 .product-item {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #e0e0e0;
   padding: 10px 0;
 }
 
@@ -28,11 +27,13 @@ h2 {
 
 .label {
   font-weight: bold;
-  color: #fff; 
+  color: #555;
+  font-family: 'Roboto', sans-serif;
 }
 
 .price {
-  color: #fff; 
+  color: #777;
+  font-family: 'Roboto', sans-serif;
 }
 
 .quantity-input {
@@ -41,7 +42,7 @@ h2 {
   border: 1px solid #ccc;
   border-radius: 4px;
   background-color: #fff;
-  color: #000; 
+  color: #000;
 }
 
 .btn-primary {
@@ -49,14 +50,31 @@ h2 {
   width: 100%;
   padding: 10px;
   margin-top: 20px;
-  background-color: #3d8bff; 
+  background-color: #007bff;
   color: #fff;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .btn-primary:hover {
-    background-color: #539dfd; 
+  background-color: #0056b3;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+
+  .item-detail {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn-primary {
+    width: 100%;
+  }
 }

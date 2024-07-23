@@ -1,3 +1,4 @@
+<app-navbar></app-navbar>
 <div class="container">
     <h2>Your Baskets</h2>
     <div *ngIf="baskets.length === 0">No baskets found.</div>
@@ -8,4 +9,4 @@
       <button class="btn-primary" (click)="viewReceipt(basket)">View Receipt</button>
     </div>
     <button class="btn-secondary" [routerLink]="['/basket']">Create New Basket</button> 
-  </div>
+</div>

@@ -1,51 +1,72 @@
 .container {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    border-radius: 8px;
-    background-color: #a986e9; 
-    color: #fff; 
-  }
-  
-  h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #fff; 
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #fff; 
-  }
-  
-  .form-control {
-    width: 95%;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+  font-family: 'Roboto', sans-serif;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #000;
+}
+
+.btn-primary {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.success-message {
+  text-align: center;
+  color: green;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .container {
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #fff; 
-    color: #000; 
   }
-  
+
   .btn-primary {
-    display: block;
     width: 100%;
-    padding: 10px;
-    margin-top: 20px;
-    background-color: #a549fc; 
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
   }
-  
-  .btn-primary:hover {
-    background-color: #ae60f7; 
-  }
+}

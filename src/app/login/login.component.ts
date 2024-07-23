@@ -13,6 +13,11 @@ export class LoginComponent {
 
   constructor(private authService: AuthService, private router: Router) {}
 
+  ngOnInit() {
+    if (this.authService.isAuthenticated()) {
+      this.router.navigate(['/user-baskets']);
+    }
+  }
   onSubmit() {
     this.authService.login(this.email, this.password).subscribe(response => {
       if (response) {

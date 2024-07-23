@@ -1,17 +1,35 @@
 <div class="container">
-    <h2>Register</h2>
-    <form (ngSubmit)="onSubmit()" #registerForm="ngForm">
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" [(ngModel)]="email" name="email" class="form-control" required email>
+  <h2>Register</h2>
+  <form (ngSubmit)="onSubmit()" #registerForm="ngForm">
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" [(ngModel)]="email" name="email" class="form-control" required email>
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" [(ngModel)]="password" name="password" class="form-control" required
+        minlength="7" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{7,}$">
+      <div
+        *ngIf="registerForm.controls['password']?.invalid && (registerForm.controls['password']?.dirty || registerForm.controls['password']?.touched)"
+        class="error">
+        Password must be at least 7 characters long, include letters, numbers, and at least one special character.
       </div>
-      <div class="form-group">
-        <label for="password">Password</label>
-        <input type="password" id="password" [(ngModel)]="password" name="password" class="form-control" required minlength="7" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{7,}$">
-        <div *ngIf="registerForm.controls['password']?.invalid && (registerForm.controls['password']?.dirty || registerForm.controls['password']?.touched)" class="error">
-          Password must be at least 7 characters long, include letters, numbers, and at least one special character.
-        </div>
+    </div>
+    <div class="form-group">
+      <label for="confirmPassword">Confirm Password</label>
+      <input type="password" id="confirmPassword" [(ngModel)]="confirmPassword" name="confirmPassword"
+        class="form-control" required>
+      <div
+        *ngIf="password !== confirmPassword && (registerForm.controls['confirmPassword']?.dirty || registerForm.controls['confirmPassword']?.touched)"
+        class="error">
+        Passwords do not match.
       </div>
-      <button type="submit" class="btn-primary" [disabled]="registerForm.invalid">Register</button>
-    </form>
+    </div>
+    <button type="submit" class="btn-primary"
+      [disabled]="registerForm.invalid || password !== confirmPassword">Register</button>
+  </form>
+  <div *ngIf="registrationSuccess" class="success-message">
+    Success! <br>
+    Redirecting you to the Login page...
   </div>
+</div>

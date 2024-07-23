@@ -12,6 +12,7 @@ import { AuthGuard } from './auth.guard';
 import { JwtInterceptor } from './interceptors/jwt.interceptor';
 import { RegisterComponent } from './register/register.component';
 import { UserBasketsComponent } from './user-baskets/user-baskets.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { UserBasketsComponent } from './user-baskets/user-baskets.component';
     ReceiptDisplayComponent,
     LoginComponent,
     RegisterComponent,
-    UserBasketsComponent
+    UserBasketsComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

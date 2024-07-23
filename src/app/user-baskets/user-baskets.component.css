@@ -1,63 +1,87 @@
-/* src/app/user-baskets/user-baskets.component.css */
+/* Container styling */
 .container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #86ade9; 
-    color: #fff; 
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styling */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Basket styling */
+.basket {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: box-shadow 0.3s ease;
+}
+
+.basket:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.basket h3 {
+  color: #555;
+  font-family: 'Roboto', sans-serif;
+}
+
+.basket p {
+  color: #777;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Button styling */
+.btn-primary, .btn-secondary {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .container {
+    padding: 10px;
   }
-  
-  h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #fff; 
-  }
-  
+
   .basket {
-    border-bottom: 1px solid #ddd;
-    padding: 10px 0;
+    padding: 15px;
   }
-  
-  .basket h3 {
-    color: #fff;
-  }
-  
-  .basket p {
-    color: #fff;
-  }
-  
-  .btn-primary {
-    display: block;
+
+  .btn-primary, .btn-secondary {
     width: 100%;
     padding: 10px;
-    margin-top: 20px;
-    background-color: #3d8bff; 
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
   }
-  
-  .btn-primary:hover {
-    background-color: #539dfd; 
-  }
-  
-  .btn-secondary {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    margin-top: 20px;
-    background-color: #744dff; /* Different color for the secondary button */
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  .btn-secondary:hover {
-    background-color: #815fff; /* Hover color for the secondary button */
-  }
+}

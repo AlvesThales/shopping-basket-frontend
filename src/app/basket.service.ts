@@ -5,16 +5,19 @@ import { Product } from './core/interfaces/product.interface';
 import { BasketItem } from './core/interfaces/basket-item.interface';
 import { FetchProductsResponse } from './core/interfaces/fetch-products-response.interface';
 import { FetchBasketsResponse } from './core/interfaces/fetch-baskets-response.interface';
+import { environment } from '../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BasketService {
 
+  private HOST_URL = environment.HOST_URL;
+
   constructor(private http: HttpClient) {}
 
   fetchProducts(): Observable<FetchProductsResponse> {
-    return this.http.get<FetchProductsResponse>('/products');
+    return this.http.get<FetchProductsResponse>(this.HOST_URL + '/products');
   }
 
   transformProductsToBasketItems(products: Product[], basketItems: BasketItem[]): BasketItem[] {
@@ -30,10 +33,10 @@ export class BasketService {
   }
 
   submitBasketItems(basketItems: BasketItem[]): Observable<any> {
-    return this.http.post('/baskets', {basketItems: basketItems});
+    return this.http.post(this.HOST_URL + '/baskets', {basketItems: basketItems});
   }
 
   getUserBaskets(): Observable<FetchBasketsResponse> {
-    return this.http.get<FetchBasketsResponse>('/baskets');
+    return this.http.get<FetchBasketsResponse>(this.HOST_URL + '/baskets');
   }
 }
