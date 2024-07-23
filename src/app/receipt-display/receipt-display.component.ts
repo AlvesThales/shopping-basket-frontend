@@ -17,7 +17,6 @@ export class ReceiptDisplayComponent implements OnInit {
     const basketData = this.basketStateService.getBasketData();
     
     if (basketData) {
-      console.log('@@@@ Basket Data:', basketData); 
       this.basketItems = basketData.basketItems;
       this.totalBasketOriginalPrice = basketData.totalBasketOriginalPrice;
       this.totalBasketDiscountedPrice = basketData.totalBasketDiscountedPrice;

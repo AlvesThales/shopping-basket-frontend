@@ -5,7 +5,7 @@
     <div *ngFor="let basket of baskets" class="basket">
       <h3>Basket</h3>
       <p>Total Items: {{ basket.basketItems.length }}</p>
-      <p>Total Cost: {{ basket.totalBasketDiscountedPrice | currency }}</p>
+      <p>Total Cost: {{ basket.totalBasketDiscountedPrice | currency:'EUR':'symbol' }}</p>
       <button class="btn-primary" (click)="viewReceipt(basket)">View Receipt</button>
     </div>
     <button class="btn-secondary" [routerLink]="['/basket']">Create New Basket</button> 
