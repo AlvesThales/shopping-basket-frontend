@@ -8,7 +8,7 @@ interface AuthResponse {
   accessToken: string;
 }
 
-const AUTH_API = 'http://localhost:5139/';
+const AUTH_API = 'http://localhost:8080/';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
