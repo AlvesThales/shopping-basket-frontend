@@ -1,0 +1,63 @@
+/* src/app/user-baskets/user-baskets.component.css */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #86ade9; 
+    color: #fff; 
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff; 
+  }
+  
+  .basket {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+  }
+  
+  .basket h3 {
+    color: #fff;
+  }
+  
+  .basket p {
+    color: #fff;
+  }
+  
+  .btn-primary {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #3d8bff; 
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .btn-primary:hover {
+    background-color: #539dfd; 
+  }
+  
+  .btn-secondary {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #744dff; /* Different color for the secondary button */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #815fff; /* Hover color for the secondary button */
+  }

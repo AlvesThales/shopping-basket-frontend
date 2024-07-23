@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'shopping-basket-frontend';
+  receipt: any = null;
+
+  onReceiptGenerated(receipt: any) {
+    this.receipt = receipt;
+  }
+
+  reset() {
+    this.receipt = null;
+  }
 }

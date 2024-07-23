@@ -1,0 +1,11 @@
+<div class="container">
+    <h2>Your Baskets</h2>
+    <div *ngIf="baskets.length === 0">No baskets found.</div>
+    <div *ngFor="let basket of baskets" class="basket">
+      <h3>Basket</h3>
+      <p>Total Items: {{ basket.basketItems.length }}</p>
+      <p>Total Cost: {{ basket.totalBasketDiscountedPrice | currency }}</p>
+      <button class="btn-primary" (click)="viewReceipt(basket)">View Receipt</button>
+    </div>
+    <button class="btn-secondary" [routerLink]="['/basket']">Create New Basket</button> 
+  </div>

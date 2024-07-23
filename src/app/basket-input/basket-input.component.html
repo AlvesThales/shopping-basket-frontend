@@ -1,0 +1,15 @@
+<div class="container">
+    <h2>Shopping Basket</h2>
+    <form (ngSubmit)="onSubmit()">
+      <div *ngFor="let item of basketItems; let i = index" class="product-item">
+        <div class="item-detail">
+          <span class="label">{{ item.ProductName }}</span>
+          <span class="price">{{ item.UnitPrice | currency:'USD':'symbol' }}</span>
+        </div>
+        <div class="item-detail">
+          <input type="number" [(ngModel)]="item.Amount" name="amount-{{i}}" min="0" placeholder="Quantity" class="quantity-input" />
+        </div>
+      </div>
+      <button type="submit" class="btn-primary">Calculate Total</button>
+    </form>
+  </div>
